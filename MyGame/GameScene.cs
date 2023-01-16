@@ -9,6 +9,9 @@ namespace MyGame
         {
             Ship ship = new Ship();
             AddGameObject(ship);
+            // a couple lines to test the meteor
+            //Meteor meteor = new Meteor(new Vector2f(650,250));
+            //AddGameObject(meteor);
         }
     }
 }
