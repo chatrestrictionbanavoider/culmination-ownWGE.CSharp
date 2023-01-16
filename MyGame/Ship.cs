@@ -2,14 +2,18 @@
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using System;
 
 namespace MyGame
 {
     class Ship : GameObject
     {
         private const float Speed = 0.3f;
+        private const int FireDelay = 200;
+        private int _fireTimer;
 
         private readonly Sprite _sprite = new Sprite();
+
         // Creates our ship.
         public Ship()
         {
@@ -36,6 +40,18 @@ namespace MyGame
             if (Keyboard.IsKeyPressed(Keyboard.Key.Left))   { x -= Speed * msElapsed; }
             if (Keyboard.IsKeyPressed(Keyboard.Key.Right))  { x += Speed * msElapsed; }
             _sprite.Position = new Vector2f(x, y);
+
+            if(_fireTimer > 0) { _fireTimer -= msElapsed; }
+
+            if(Keyboard.IsKeyPressed(Keyboard.Key.Space) && _fireTimer <= 0)
+            {
+                _fireTimer = FireDelay;
+                FloatRect bounds = _sprite.GetGlobalBounds();
+                float laserX = x + bounds.Width;
+                float laserY = y + bounds.Height / 2.0f;
+                Laser laser = new Laser(new Vector2f(laserX, laserY));
+                Game.CurrentScene.AddGameObject(laser);
+            }
         }
     }
 }
