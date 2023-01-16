@@ -1,8 +1,6 @@
 ﻿using GameEngine;
 using SFML.Graphics;
 using SFML.System;
-using System;
-using System.Reflection.Metadata.Ecma335;
 
 namespace MyGame
 {
