@@ -12,6 +12,9 @@ namespace MyGame
             // a couple lines to test the meteor
             //Meteor meteor = new Meteor(new Vector2f(650,250));
             //AddGameObject(meteor);
+
+            MeteorSpawner meteorSpawner = new MeteorSpawner();
+            AddGameObject(meteorSpawner);
         }
     }
 }
