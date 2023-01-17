@@ -37,5 +37,11 @@ namespace MyGame
                 _sprite.Position = new Vector2f(pos.X + Speed * msElapsed, pos.Y);
             }
         }
+
+        // for collisions, just add this method to the class (and modify meteor)
+        public override FloatRect GetCollisionRect()
+        {
+            return _sprite.GetGlobalBounds();
+        }
     }
 }
