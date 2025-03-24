@@ -5,7 +5,7 @@ using SFML.System;
 namespace GameEngine
 {
     // A sprite that can have multiple animations and play them with different AnimationModes.
-    class AnimatedSprite : GameObject
+    public class AnimatedSprite : GameObject
     {
         // Specifies how to play an animation.
         public enum AnimationMode

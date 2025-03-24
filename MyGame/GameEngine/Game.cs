@@ -8,7 +8,7 @@ using SFML.Window;
 namespace GameEngine
 {
     // The Game manages scenes and runs the main game loop.
-    static class Game
+    public static class Game
     {
         // The number of frames that will be drawn to the screen in one second.
         private const int FramesPerSecond = 60;
