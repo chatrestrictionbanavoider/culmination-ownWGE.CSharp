@@ -41,22 +41,6 @@ When you get to the end of the tutorial, there is one more step.  That step is n
 1) This should open the solution and the tool bar should now contain a green play button with “Debug, AnyCPU”.
 1) Press play and see it compile and run, showing a blank window ready for the tutorial to start.
 
-## Setup in Visual Studio 2022 for Mac
-
-1) Install Visual Studio for Mac 2022 from [https://visualstudio.microsoft.com/vs/mac/](https://visualstudio.microsoft.com/vs/mac/)
-2) Install MacPorts from [https://www.macports.org/](https://www.macports.org/). This will also ensure you have XCode properly installed and setup. *Follow these instructions carefully!*
-3) Open a Terminal window and execute `sudo port install csfml`. Answer `yes` or `y` when prompted to complete the installation.
-4) Launch Visual Studio 2022 for Mac
-5) Ignore the initial screen and select `File -> Clone Repository...`
-6) Paste in `https://github.com/[Your GitHub username]/WilliamsGameEngine.CSharp.git` and click Clone.  (You can get the link by going to your forked repository on your GitHub account, and pressing the copy link button.)
-7) Click the arrow next to MyGame to see the source files, like GameScene.cs.
-8) The tool bar should contain a white play button with “Debug, Default”.
-9) Press play and see it compile and run, showing a blank window ready for the tutorial to start.
-
-## Updates to the Tutorial
-
-I updated the tutorial from the original version which was written for C++.  So you may find remnants of C++ in it.  But those remnants should be minor.
-
 ## Credits
 
-This tutorial and SFML-based game engine was originally written in C++ by Eric Williams. Ported to C# by [Mike Magruder](https://github.com/mikemag).
+This tutorial and SFML-based game engine was originally written in C++ by [Eric Williams](https://github.com/boringuser). Ported to C# by [Mike Magruder](https://github.com/mikemag).

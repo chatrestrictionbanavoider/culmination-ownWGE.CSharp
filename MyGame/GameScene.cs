@@ -2,7 +2,7 @@
 
 namespace MyGame
 {
-    class GameScene : Scene
+    public class GameScene : Scene
     {
         public GameScene()
         {

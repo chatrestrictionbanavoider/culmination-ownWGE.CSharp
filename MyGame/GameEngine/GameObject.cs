@@ -5,7 +5,7 @@ using SFML.System;
 namespace GameEngine
 {
     // This class represents every object in your game, such as the player, enemies, and so on.
-    abstract class GameObject
+    public abstract class GameObject
     {
         private bool _isCollisionCheckEnabled;
 
