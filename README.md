@@ -43,4 +43,4 @@ When you get to the end of the tutorial, there is one more step.  That step is n
 
 ## Credits
 
-This tutorial and SFML-based game engine was originally written in C++ by Eric Williams. Ported to C# by [Mike Magruder](https://github.com/mikemag).
+This tutorial and SFML-based game engine was originally written in C++ by [Eric Williams](https://github.com/boringuser). Ported to C# by [Mike Magruder](https://github.com/mikemag).
