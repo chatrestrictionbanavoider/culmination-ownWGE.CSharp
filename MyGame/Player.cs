@@ -13,14 +13,13 @@ namespace MyGame
 {
     public class Player : GameObject
     {
-        private const float Speed = .3f;
+        private const float Speed = .07f;
         private readonly Sprite _sprite = new Sprite();
-        int length = 2;
         Keyboard.Key direction = Keyboard.Key.Down;
         public Player()
         {
-            _sprite.Texture = Game.GetTexture("Resources/snakehead.png");
-            _sprite.Position = new Vector2f(100, 100);
+            _sprite.Texture = Game.GetTexture("Resources/bucket.png");
+            _sprite.Position = new Vector2f(121, 194);
         }
         public override void Draw()
         {
@@ -28,20 +27,14 @@ namespace MyGame
         }
         public override void Update(Time elapsed)
         {
+            Vector2f prevpos = _sprite.Position;
             Vector2f pos = _sprite.Position;
             float x = pos.X;
             float y = pos.Y;
             int msElapsed = elapsed.AsMilliseconds();
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Up)) { direction = Keyboard.Key.Up; }
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Down)) { direction = Keyboard.Key.Down; }
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) { direction = Keyboard.Key.Left; }
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Right)) { direction = Keyboard.Key.Right; }
-            if (direction == (Keyboard.Key.Up)) { y -= Speed * msElapsed; }
-            if (direction == (Keyboard.Key.Down)) { y += Speed * msElapsed; }
-            if (direction == (Keyboard.Key.Left)) { x -= Speed * msElapsed; }
-            if (direction == (Keyboard.Key.Right)) { x += Speed * msElapsed; }
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) { x -= Speed * msElapsed; }
+            if (Keyboard.IsKeyPressed(Keyboard.Key.Right)) { x += Speed * msElapsed; }
             _sprite.Position = new Vector2f(x, y);
-
         }
     }
 }
