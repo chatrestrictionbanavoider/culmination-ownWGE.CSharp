@@ -6,6 +6,8 @@ namespace MyGame
     {
         public GameScene()
         {
+            Player player = new Player();
+            AddGameObject(player);
         }
     }
 }
