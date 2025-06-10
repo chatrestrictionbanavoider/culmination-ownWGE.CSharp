@@ -36,7 +36,10 @@ namespace MyGame
             if (Keyboard.IsKeyPressed(Keyboard.Key.Down)) { direction = Keyboard.Key.Down; }
             if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) { direction = Keyboard.Key.Left; }
             if (Keyboard.IsKeyPressed(Keyboard.Key.Right)) { direction = Keyboard.Key.Right; }
-
+            if (direction == (Keyboard.Key.Up)) { y -= Speed * msElapsed; }
+            if (direction == (Keyboard.Key.Down)) { y += Speed * msElapsed; }
+            if (direction == (Keyboard.Key.Left)) { x -= Speed * msElapsed; }
+            if (direction == (Keyboard.Key.Right)) { x += Speed * msElapsed; }
             _sprite.Position = new Vector2f(x, y);
 
         }
