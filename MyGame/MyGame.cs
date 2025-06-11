@@ -3,8 +3,8 @@ namespace MyGame
 {
     public static class MyGame
     {
-        private const int WindowWidth = 239;
-        private const int WindowHeight = 211;
+        private const int WindowWidth = 400;
+        private const int WindowHeight = 400;
 
         private const string WindowTitle = "they called him bucket boy";
 

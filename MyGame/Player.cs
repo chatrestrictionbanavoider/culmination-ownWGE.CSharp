@@ -13,14 +13,20 @@ namespace MyGame
 {
     public class Player : GameObject
     {
-        private const float Speed = .07f;
+        private const float Speed = .3f;
         private readonly Sprite _sprite = new Sprite();
         Keyboard.Key direction = Keyboard.Key.Down;
         public Player()
         {
             _sprite.Texture = Game.GetTexture("Resources/bucket.png");
-            _sprite.Position = new Vector2f(121, 194);
+            _sprite.Position = new Vector2f(193, 370);
+            AssignTag("player");
         }
+        public override FloatRect GetCollisionRect()
+        {
+            return _sprite.GetGlobalBounds();
+        }
+
         public override void Draw()
         {
             Game.RenderWindow.Draw(_sprite);

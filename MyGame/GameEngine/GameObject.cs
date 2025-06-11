@@ -7,7 +7,7 @@ namespace GameEngine
     // This class represents every object in your game, such as the player, enemies, and so on.
     public abstract class GameObject
     {
-        private bool _isCollisionCheckEnabled;
+        private bool _isCollisionCheckEnabled = true;
 
         private bool _isDead;
 
